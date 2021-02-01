@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Touch Nums Game</title>
+  </head>
+  <body onload="init(16)">
+    <h1>Touch the Numbers</h1>
+    <h3 class="header">Choose your level:</h3>
+    <div class="btn-div">
+      <button class="btn" data-size="16" onclick="changeSize(this)">
+        Easy(16)
+      </button>
+      <button class="btn" data-size="25" onclick="changeSize(this)">
+        Hard(25)
+      </button>
+      <button class="btn" data-size="36" onclick="changeSize(this)">
+        Extreme(36)
+      </button>
+    </div>
+    <div class="headers-div">
+      <div class="inner-div">
+        <h3 class="header">Game time:</h3>
+        <p class="clock">0.000</p>
+      </div>
+      <div class="inner-div">
+        <h3 class="header">Next number:</h3>
+        <p class="next-num">1</p>
+      </div>
+    </div>
+    <table cellpadding="10" class="board-table">
+      <tbody class="board"></tbody>
+    </table>
+
+    <div class="play-again">
+      <img src="images/trophy.png" />
+      <p>
+        <b>Great Job!</b> <br />
+        <b>Your score is <span class="span-score"></span></b>
+        <br />Would you like to play again?
+      </p>
+      <button class="play-again-btn" onclick="playAgain()">Play Again</button>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
